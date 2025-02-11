@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_tmdb_api/UI/movie/movie_home.dart';
+import 'package:movie_tmdb_api/UI/tv/tv_home.dart';
 
 class Home_page extends StatefulWidget {
   const Home_page({super.key});
@@ -10,6 +12,15 @@ class Home_page extends StatefulWidget {
 class _Home_pageState extends State<Home_page> {
   int _selectedIndex = 0;
 
+// for movie and tv page set changes
+  Widget getView() {
+    if (_selectedIndex == 0) {
+      return Movie_Home();
+    } else {
+      return TvHome();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +30,7 @@ class _Home_pageState extends State<Home_page> {
         backgroundColor: Colors.cyan,
         centerTitle: true,
       ),
-      body: Container(),
+      body: getView(),
       //Bottom Navigation Bar for switching between Movies and TV Shows.
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
