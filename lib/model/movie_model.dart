@@ -66,3 +66,5 @@ class MovieModel {
     return data;
   }
 }
+
+//for creare movie model just go to postman and copy 1st one in popuer movies api
