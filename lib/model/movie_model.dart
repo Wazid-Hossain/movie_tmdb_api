@@ -68,3 +68,4 @@ class MovieModel {
 }
 
 //for creare movie model just go to postman and copy 1st one in popuer movies api
+// and go to json to dart converver and convert the json file into dart.
